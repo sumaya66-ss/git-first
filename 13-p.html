@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <style>
+ /* h1 {
+    font-size: clamp(2rem,5vw,4rem);
+    color:red;
+   }
+   @media (min-width: 600px){
+    h1{
+      color: blueviolet;
+    }
+   }
+   @media (min-width:900px){
+    h1{
+      color: green;
+    }
+   }*/
+  </style>
+
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+</head>
+<body>
+ <h1 class="text-red-500 md:text-blue-500 lg:text-green-500">Hello world</h1>
+ <img src="images/img.jpg" class="w-[300px] md:w-[500px] lg:w-[800px]">
+ <form class="m-20  lg:grid lg:grid-cols-2 lg:gap-4">
+  <input type="text" placeholder="hello" class="border placeholder:p-20 col-span-2 lg:col-span-1 ">
+  <input type="text" placeholder="world" class="border col-span-2 lg:col-span-1 ">
+  
+ </form>
+ <form class="flex flex-col lg:flex-row m-20 gap-4">
+  <input type="text" placeholder="hello" class="border ">
+  <input type="text" placeholder="world" class="border">
+  </form>
+  
+</body>
+</html>

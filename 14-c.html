@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    table {
+      width: 100%;
+      min-width: 800px;
+     
+    }
+    th,td{
+      padding: 12px 15px;
+      text-align: left;
+      bottom: 1px solid #eee ;
+    }
+    th{
+      background-color: #f0f0f0;
+    }
+table.o{
+  overflow-x: auto;
+}
+@media screen and (max-width:500px) {
+  table.o{
+   overflow: hidden;
+
+  ;
+}
+ table {
+     
+      min-width: 100%;   
+     
+    }
+    table,th,td,thead,tbody,tr{
+      display: block;
+    }
+}
+thead{
+  display: none;
+} tr{
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+} 
+td {
+  position: relative;
+  text-align: right;
+}
+td::before{
+  content: attr(data-label);
+  position: absolute;
+  left: 15px;
+  width: 45%;
+  font-weight: bold;
+  text-align: left;
+  white-space: nowrap;
+}
+  </style>
+</head>
+
+<body>
+  <div class="table.o">
+  <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>price</th>
+        <th>In stock</th>
+        <th>Category</th>
+        <th>Delicery Estimate</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td data-label="Product Name">keyboad</td>
+        <td data-label="price">$129.99</td>
+        <td data-label="In stock"> no </td>
+        <td data-label="Category"> Electronics</td>
+        <td data-label="Delicery Estimate">2-3 Days</td>
+
+      </tr>
+      <tr>
+        <td data-label="Product Name">Monitor</td>
+        <td data-label="price">$1110.99</td>
+        <td data-label="In stock"> yes </td>
+        <td data-label="Category"> Electronics</td>
+        <td data-label="Delicery Estimate">2-3 Days</td>
+
+      </tr>
+      <tr>
+        <td data-label="Product Name">Soundbox</td>
+        <td data-label="price">$150.99</td>
+        <td data-label="In stock"> no </td>
+        <td data-label="Category"> Electronics</td>
+        <td data-label="Delicery Estimate">2-3 Days</td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+</body>
+
+</html>
